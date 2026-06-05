@@ -111,10 +111,22 @@
         <div class="gallery-section">
             <h3>Galeri Kami</h3>
             <div class="gallery">
-                <img src="https://via.placeholder.com/300x300?text=Foto+1" alt="Foto 1">
-                <img src="https://via.placeholder.com/300x300?text=Foto+2" alt="Foto 2">
-                <img src="https://via.placeholder.com/300x300?text=Foto+3" alt="Foto 3">
-                <img src="https://via.placeholder.com/300x300?text=Foto+4" alt="Foto 4">
+                <div class="gallery-item">
+                    <div class="placeholder-img">📷</div>
+                    <p>Foto 1</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img">📷</div>
+                    <p>Foto 2</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img">📷</div>
+                    <p>Foto 3</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img">📷</div>
+                    <p>Foto 4</p>
+                </div>
             </div>
         </div>
 
@@ -137,7 +149,7 @@
     <script>
         // Open Invitation Function
         function openInvitation() {
-            console.log('Button clicked!');
+            console.log('Opening invitation...');
             const cover = document.getElementById('cover');
             const invitation = document.getElementById('invitation');
             
@@ -146,54 +158,62 @@
                 invitation.style.display = 'block';
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 console.log('Invitation opened successfully');
-            } else {
-                console.log('Error: Elements not found');
             }
         }
 
-        // Direct click handler on button
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM Content Loaded');
-            
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeButton);
+        } else {
+            initializeButton();
+        }
+
+        function initializeButton() {
             const openBtn = document.getElementById('openBtn');
             if (openBtn) {
-                console.log('Button found, adding click listener');
+                console.log('Button found, setting up click handler');
+                
+                // Method 1: Click event
                 openBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    console.log('Button click event triggered');
+                    console.log('Click event triggered');
                     openInvitation();
                 });
+                
+                // Method 2: Touch event for mobile
+                openBtn.addEventListener('touchend', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Touch event triggered');
+                    openInvitation();
+                });
+                
+                // Method 3: Mousedown for extra compatibility
+                openBtn.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    console.log('Mousedown event triggered');
+                });
             } else {
-                console.log('Button not found');
+                console.log('Button element not found');
             }
 
-            // RSVP Form Submission
+            // RSVP Form Handler
             const rsvpForm = document.getElementById('rsvpForm');
             if (rsvpForm) {
                 rsvpForm.addEventListener('submit', function(e) {
                     e.preventDefault();
+                    const nama = this.elements[0].value;
+                    const status = this.elements[1].value;
+                    const jumlahTamu = this.elements[2].value;
+                    const ucapan = this.elements[3].value;
                     
-                    const formData = {
-                        nama: this.elements[0].value,
-                        status: this.elements[1].value,
-                        jumlahTamu: this.elements[2].value,
-                        ucapan: this.elements[3].value
-                    };
-                    
-                    console.log('Data RSVP:', formData);
-                    alert('Terima kasih! Konfirmasi Anda telah diterima.');
+                    console.log('RSVP Data:', { nama, status, jumlahTamu, ucapan });
+                    alert('Terima kasih ' + nama + '! Konfirmasi Anda telah diterima.');
                     this.reset();
                 });
             }
-
-            // Gallery click handler
-            document.querySelectorAll('.gallery img').forEach(img => {
-                img.addEventListener('click', function() {
-                    window.open(this.src, '_blank');
-                });
-            });
-        });
+        }
     </script>
 </body>
 </html>
