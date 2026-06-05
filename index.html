@@ -3,180 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan - Yunizaf Afi T & Selma Fatiha B</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Undangan Pernikahan - Yunizaf & Selma</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f7f4;
+            color: #2c3e50;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .visible {
+            display: block !important;
+        }
+        
+        button {
+            cursor: pointer;
+            padding: 15px 40px;
+            font-size: 16px;
+            background-color: #d4af37;
+            color: #8b4513;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #8b4513;
+            color: #ecf0f1;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <!-- Cover -->
-    <section class="cover" id="cover">
-        <div class="cover-content">
-            <div class="cover-text">
-                <p class="invitation-text">Undangan Pernikahan</p>
-                <h1 class="couple-name">Yunizaf & Selma</h1>
-                <p class="invitation-date">Sabtu, 04 Juli 2026</p>
-                <button class="open-btn" id="openBtn" type="button">Buka Undangan</button>
-            </div>
-            <div class="cover-decoration">
-                <div class="flower flower-1">🌹</div>
-                <div class="flower flower-2">🌹</div>
-            </div>
+    <!-- Cover Page -->
+    <div id="coverPage" style="min-height: 100vh; background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c4 100%); display: flex; align-items: center; justify-content: center; text-align: center; position: relative;">
+        <div style="padding: 20px; z-index: 10;">
+            <p style="font-size: 18px; color: #8b4513; letter-spacing: 2px; margin-bottom: 10px;">Undangan Pernikahan</p>
+            <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 700; color: #8b4513; margin: 20px 0;">Yunizaf & Selma</h1>
+            <p style="font-size: 20px; color: #8b4513; margin-bottom: 40px;">Sabtu, 04 Juli 2026</p>
+            <button id="bukaBtn">Buka Undangan</button>
         </div>
-    </section>
+        <div style="position: absolute; top: 10%; left: 5%; font-size: 150px; opacity: 0.15;">🌹</div>
+        <div style="position: absolute; bottom: 15%; right: 5%; font-size: 150px; opacity: 0.15;">🌹</div>
+    </div>
 
-    <!-- Main Invitation -->
-    <section class="invitation" id="invitation" style="display: none;">
+    <!-- Invitation Page -->
+    <div id="invitationPage" class="hidden" style="max-width: 800px; margin: 0 auto; background: white; padding: 50px 40px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);">
         
         <!-- Header -->
-        <div class="header">
-            <div class="header-decoration">
-                <span class="decorative-line"></span>
-                <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
-                <span class="decorative-line"></span>
+        <div style="text-align: center; margin-bottom: 40px; border-bottom: 2px solid #d4af37; padding-bottom: 20px;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                <span style="flex: 1; height: 2px; background-color: #d4af37;"></span>
+                <h2 style="font-size: 24px; color: #8b4513; font-family: 'Cormorant Garamond', serif; margin: 0; white-space: nowrap;">Assalamu'alaikum</h2>
+                <span style="flex: 1; height: 2px; background-color: #d4af37;"></span>
             </div>
         </div>
 
         <!-- Opening -->
-        <div class="opening">
+        <div style="text-align: center; margin-bottom: 40px; font-size: 16px; line-height: 1.8;">
             <p>Dengan memohon rahmat dan ridha Allah Subhanahu Wa Ta'ala</p>
             <p>Kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami:</p>
         </div>
 
-        <!-- Couple Names -->
-        <div class="couple-info">
-            <div class="bride">
-                <h3>Yunizaf Afi Taufiqurrahman</h3>
-                <p>Putra dari</p>
-                <p><strong>Bapak Nardi & Ibu Erna Wahyuni</strong></p>
+        <!-- Couple Info -->
+        <div style="display: flex; justify-content: space-around; align-items: center; margin: 50px 0; padding: 30px 0; border-top: 2px solid #d4af37; border-bottom: 2px solid #d4af37;">
+            <div style="text-align: center; flex: 1;">
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #8b4513; margin-bottom: 10px;">Yunizaf</h3>
+                <p style="font-size: 14px; color: #2c3e50; margin: 5px 0;">Putra dari</p>
+                <p style="font-size: 14px; color: #2c3e50; margin: 5px 0;"><strong>Bapak Nardi & Ibu Erna</strong></p>
             </div>
-            <div class="separator">&</div>
-            <div class="groom">
-                <h3>drg. Selma Fatiha Bernice</h3>
-                <p>Putri dari</p>
-                <p><strong>Alm. Bapak Soni Tresnadi & Almh. Ibu Umi Mersiana</strong></p>
+            <div style="font-size: 48px; font-weight: bold; color: #d4af37; margin: 0 20px;">&</div>
+            <div style="text-align: center; flex: 1;">
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #8b4513; margin-bottom: 10px;">Selma</h3>
+                <p style="font-size: 14px; color: #2c3e50; margin: 5px 0;">Putri dari</p>
+                <p style="font-size: 14px; color: #2c3e50; margin: 5px 0;"><strong>Alm. Bapak Soni & Almh. Ibu Umi</strong></p>
             </div>
         </div>
 
         <!-- Event Details -->
-        <div class="event-details">
-            <div class="event-item">
-                <h4>Akad Nikah</h4>
-                <div class="detail-row">
-                    <span class="icon">📅</span>
-                    <div>
-                        <p>Sabtu, 04 Juli 2026</p>
-                        <p>Pukul 09.00 - 09.30 WIB</p>
-                    </div>
-                </div>
-                <div class="detail-row">
-                    <span class="icon">📍</span>
-                    <p>Tentrem Bumi Coffe Solo, Desa Gonilan, Tengah, RT.02/RW.12, Kec. Kartasura, Kabupaten Sukoharjo,Jawa Tengah</p>
-                </div>
+        <div style="margin: 50px 0;">
+            <div style="background-color: #f9f7f4; padding: 25px; margin-bottom: 20px; border-radius: 10px; border-left: 5px solid #d4af37;">
+                <h4 style="font-size: 20px; color: #8b4513; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif;">Akad Nikah</h4>
+                <p style="font-size: 14px; margin: 8px 0;"><strong>📅 Sabtu, 04 Juli 2026</strong></p>
+                <p style="font-size: 14px; margin: 8px 0;">Pukul 09.00 - 09.30 WIB</p>
+                <p style="font-size: 14px; margin: 8px 0;"><strong>📍 Tentrem Bumi Coffe Solo</strong></p>
+                <p style="font-size: 13px; margin: 5px 0; color: #555;">Desa Gonilan, Tengah, RT.02/RW.12, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah</p>
             </div>
 
-            <div class="event-item">
-                <h4>Resepsi</h4>
-                <div class="detail-row">
-                    <span class="icon">📅</span>
-                    <div>
-                        <p>Sabtu, 04 Juli 2026</p>
-                        <p>Pukul 09.30 - 12.00 WIB</p>
-                    </div>
-                </div>
-                <div class="detail-row">
-                    <span class="icon">📍</span>
-                    <p>Tentrem Bumi Coffe Solo, Desa Gonilan, Tengah, RT.02/RW.12, Kec. Kartasura, Kabupaten Sukoharjo,Jawa Tengah</p>
-                </div>
+            <div style="background-color: #f9f7f4; padding: 25px; margin-bottom: 20px; border-radius: 10px; border-left: 5px solid #d4af37;">
+                <h4 style="font-size: 20px; color: #8b4513; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif;">Resepsi</h4>
+                <p style="font-size: 14px; margin: 8px 0;"><strong>📅 Sabtu, 04 Juli 2026</strong></p>
+                <p style="font-size: 14px; margin: 8px 0;">Pukul 09.30 - 12.00 WIB</p>
+                <p style="font-size: 14px; margin: 8px 0;"><strong>📍 Tentrem Bumi Coffe Solo</strong></p>
+                <p style="font-size: 13px; margin: 5px 0; color: #555;">Desa Gonilan, Tengah, RT.02/RW.12, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah</p>
             </div>
         </div>
 
+        <!-- RSVP Section -->
+        <div style="text-align: center; margin: 50px 0; padding: 40px; background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c4 100%); border-radius: 15px;">
+            <h3 style="font-size: 24px; color: #8b4513; margin-bottom: 10px; font-family: 'Cormorant Garamond', serif;">Konfirmasi Kehadiran</h3>
+            <p style="margin-bottom: 25px; color: #2c3e50;">Kami sangat berharap kehadiran Anda</p>
+            <form id="rsvpForm" style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" placeholder="Nama Lengkap" required style="padding: 12px 15px; border: 2px solid #d4af37; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 14px;">
+                <select required style="padding: 12px 15px; border: 2px solid #d4af37; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 14px;">
+                    <option value="">Pilih Status</option>
+                    <option value="hadir">Saya Akan Hadir</option>
+                    <option value="tidak">Saya Tidak Bisa Hadir</option>
+                </select>
+                <input type="number" placeholder="Jumlah Tamu" min="1" max="5" required style="padding: 12px 15px; border: 2px solid #d4af37; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 14px;">
+                <textarea placeholder="Ucapan/Doa (opsional)" rows="3" style="padding: 12px 15px; border: 2px solid #d4af37; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 14px; resize: vertical;"></textarea>
+                <button type="submit">Kirim Konfirmasi</button>
+            </form>
+        </div>
+
+        <!-- Gallery -->
+        <div style="margin: 50px 0; text-align: center;">
+            <h3 style="font-size: 24px; color: #8b4513; margin-bottom: 30px; font-family: 'Cormorant Garamond', serif;">Galeri Kami</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+                <div style="background-color: #f9f7f4; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="font-size: 80px; margin-bottom: 10px;">📷</div>
+                    <p style="color: #8b4513;">Foto 1</p>
+                </div>
+                <div style="background-color: #f9f7f4; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="font-size: 80px; margin-bottom: 10px;">📷</div>
+                    <p style="color: #8b4513;">Foto 2</p>
+                </div>
+                <div style="background-color: #f9f7f4; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="font-size: 80px; margin-bottom: 10px;">📷</div>
+                    <p style="color: #8b4513;">Foto 3</p>
+                </div>
+                <div style="background-color: #f9f7f4; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="font-size: 80px; margin-bottom: 10px;">📷</div>
+                    <p style="color: #8b4513;">Foto 4</p>
                 </div>
             </div>
         </div>
 
         <!-- Closing -->
-        <div class="closing">
-            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami</p>
-            <p>apabila Bapak/Ibu berkenan menghadiri dan mendoakan semoga</p>
-            <p>pernikahan kami diberkahi oleh Allah Subhanahu Wa Ta'ala</p>
-            <p class="closing-gratitude">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+        <div style="text-align: center; margin: 50px 0; padding: 30px; border-top: 2px solid #d4af37;">
+            <p style="margin: 12px 0; font-size: 15px; line-height: 1.6;">Merupakan suatu kehormatan dan kebahagiaan bagi kami</p>
+            <p style="margin: 12px 0; font-size: 15px; line-height: 1.6;">apabila Bapak/Ibu berkenan menghadiri dan mendoakan</p>
+            <p style="margin: 12px 0; font-size: 15px; line-height: 1.6;">pernikahan kami diberkahi oleh Allah</p>
+            <p style="font-style: italic; color: #8b4513; margin-top: 20px; font-weight: 600;">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
             <p style="margin-top: 30px; font-style: italic;">Yunizaf & Selma</p>
         </div>
 
         <!-- Footer -->
-        <div class="footer">
+        <div style="text-align: center; padding: 30px; background-color: #8b4513; color: #ecf0f1; font-size: 13px;">
             <p>© 2026 Undangan Pernikahan Digital | Dibuat dengan ❤️</p>
         </div>
 
-    </section>
+    </div>
 
     <script>
-        // Open Invitation Function
-        function openInvitation() {
-            console.log('Opening invitation...');
-            const cover = document.getElementById('cover');
-            const invitation = document.getElementById('invitation');
-            
-            if (cover && invitation) {
-                cover.style.display = 'none';
-                invitation.style.display = 'block';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                console.log('Invitation opened successfully');
-            }
+        var coverPage = document.getElementById('coverPage');
+        var invitationPage = document.getElementById('invitationPage');
+        var bukaBtn = document.getElementById('bukaBtn');
+        var rsvpForm = document.getElementById('rsvpForm');
+
+        if (bukaBtn) {
+            bukaBtn.onclick = function() {
+                coverPage.className = 'hidden';
+                invitationPage.className = 'visible';
+                window.scrollTo(0, 0);
+            };
         }
 
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializeButton);
-        } else {
-            initializeButton();
-        }
-
-        function initializeButton() {
-            const openBtn = document.getElementById('openBtn');
-            if (openBtn) {
-                console.log('Button found, setting up click handler');
-                
-                // Method 1: Click event
-                openBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Click event triggered');
-                    openInvitation();
-                });
-                
-                // Method 2: Touch event for mobile
-                openBtn.addEventListener('touchend', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Touch event triggered');
-                    openInvitation();
-                });
-                
-                // Method 3: Mousedown for extra compatibility
-                openBtn.addEventListener('mousedown', function(e) {
-                    e.preventDefault();
-                    console.log('Mousedown event triggered');
-                });
-            } else {
-                console.log('Button element not found');
-            }
-
-            // RSVP Form Handler
-            const rsvpForm = document.getElementById('rsvpForm');
-            if (rsvpForm) {
-                rsvpForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const nama = this.elements[0].value;
-                    const status = this.elements[1].value;
-                    const jumlahTamu = this.elements[2].value;
-                    const ucapan = this.elements[3].value;
-                    
-                    console.log('RSVP Data:', { nama, status, jumlahTamu, ucapan });
-                    alert('Terima kasih ' + nama + '! Konfirmasi Anda telah diterima.');
-                    this.reset();
-                });
-            }
+        if (rsvpForm) {
+            rsvpForm.onsubmit = function(e) {
+                e.preventDefault();
+                var nama = this.elements[0].value;
+                alert('Terima kasih ' + nama + '! Konfirmasi Anda telah diterima.');
+                this.reset();
+            };
         }
     </script>
 </body>
