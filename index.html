@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Nama Pengantin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cover -->
+    <section class="cover" id="cover">
+        <div class="cover-content">
+            <div class="cover-text">
+                <p class="invitation-text">Undangan Pernikahan</p>
+                <h1 class="couple-name">Ade & Bella</h1>
+                <p class="invitation-date">Sabtu, 15 Juni 2024</p>
+                <button class="open-btn" onclick="openInvitation()">Buka Undangan</button>
+            </div>
+            <div class="cover-decoration">
+                <div class="flower flower-1">🌹</div>
+                <div class="flower flower-2">🌹</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Invitation -->
+    <section class="invitation" id="invitation" style="display: none;">
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="header-decoration">
+                <span class="decorative-line"></span>
+                <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+                <span class="decorative-line"></span>
+            </div>
+        </div>
+
+        <!-- Opening -->
+        <div class="opening">
+            <p>Dengan memohon rahmat dan ridha Allah Subhanahu Wa Ta'ala</p>
+            <p>Kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami:</p>
+        </div>
+
+        <!-- Couple Names -->
+        <div class="couple-info">
+            <div class="bride">
+                <h3>Ade Rahman</h3>
+                <p>Putra dari</p>
+                <p><strong>Bapak Ahmad & Ibu Siti</strong></p>
+            </div>
+            <div class="separator">&</div>
+            <div class="groom">
+                <h3>Bella Wijaya</h3>
+                <p>Putri dari</p>
+                <p><strong>Bapak Wijaya & Ibu Retno</strong></p>
+            </div>
+        </div>
+
+        <!-- Event Details -->
+        <div class="event-details">
+            <div class="event-item">
+                <h4>Akad Nikah</h4>
+                <div class="detail-row">
+                    <span class="icon">📅</span>
+                    <div>
+                        <p>Sabtu, 15 Juni 2024</p>
+                        <p>Pukul 10.00 - 11.30 WIB</p>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="icon">📍</span>
+                    <p>Masjid Agung, Jl. Merdeka No. 123, Jakarta</p>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <h4>Resepsi</h4>
+                <div class="detail-row">
+                    <span class="icon">📅</span>
+                    <div>
+                        <p>Sabtu, 15 Juni 2024</p>
+                        <p>Pukul 12.00 - 17.00 WIB</p>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="icon">📍</span>
+                    <p>Ballroom Grand Hotel, Jl. Ahmad Yani No. 456, Jakarta</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSVP Section -->
+        <div class="rsvp-section">
+            <h3>Konfirmasi Kehadiran</h3>
+            <p>Kami sangat berharap kehadiran Bapak/Ibu</p>
+            <form class="rsvp-form" id="rsvpForm">
+                <input type="text" placeholder="Nama Lengkap" required>
+                <select required>
+                    <option value="">Pilih Status</option>
+                    <option value="hadir">Saya Akan Hadir</option>
+                    <option value="tidak">Saya Tidak Bisa Hadir</option>
+                </select>
+                <input type="number" placeholder="Jumlah Tamu" min="1" max="5" required>
+                <textarea placeholder="Ucapan/Doa (opsional)" rows="3"></textarea>
+                <button type="submit" class="submit-btn">Kirim Konfirmasi</button>
+            </form>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery-section">
+            <h3>Galeri Kami</h3>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300x300?text=Foto+1" alt="Foto 1">
+                <img src="https://via.placeholder.com/300x300?text=Foto+2" alt="Foto 2">
+                <img src="https://via.placeholder.com/300x300?text=Foto+3" alt="Foto 3">
+                <img src="https://via.placeholder.com/300x300?text=Foto+4" alt="Foto 4">
+            </div>
+        </div>
+
+        <!-- Closing -->
+        <div class="closing">
+            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami</p>
+            <p>apabila Bapak/Ibu berkenan menghadiri dan mendoakan semoga</p>
+            <p>pernikahan kami diberkahi oleh Allah Subhanahu Wa Ta'ala</p>
+            <p class="closing-gratitude">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+            <p style="margin-top: 30px; font-style: italic;">Ade & Bella</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 Undangan Pernikahan Digital | Dibuat dengan ❤️</p>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

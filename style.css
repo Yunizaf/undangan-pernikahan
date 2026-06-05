@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #d4af37;
+    --secondary-color: #8b4513;
+    --text-dark: #2c3e50;
+    --text-light: #ecf0f1;
+    --bg-light: #f9f7f4;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* ===== COVER SECTION ===== */
+.cover {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.cover-text {
+    animation: fadeInDown 1s ease-out;
+}
+
+.invitation-text {
+    font-size: 18px;
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.couple-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 20px 0;
+}
+
+.invitation-date {
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.open-btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.open-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    transform: scale(1.05);
+}
+
+/* Decorative Flowers */
+.cover-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.flower {
+    position: absolute;
+    opacity: 0.15;
+    font-size: 150px;
+}
+
+.flower-1 {
+    top: 10%;
+    left: 5%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.flower-2 {
+    bottom: 15%;
+    right: 5%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+/* ===== INVITATION SECTION ===== */
+.invitation {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.8s ease-out;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+
+.header-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.decorative-line {
+    flex: 1;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.header h2 {
+    font-size: 24px;
+    color: var(--secondary-color);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.opening {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.opening p {
+    margin: 10px 0;
+    color: var(--text-dark);
+}
+
+/* Couple Info */
+.couple-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+    padding: 30px 0;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.bride, .groom {
+    text-align: center;
+    flex: 1;
+}
+
+.bride h3, .groom h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.bride p, .groom p {
+    font-size: 14px;
+    color: var(--text-dark);
+    margin: 5px 0;
+}
+
+.separator {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 20px;
+}
+
+/* Event Details */
+.event-details {
+    margin: 50px 0;
+}
+
+.event-item {
+    background-color: var(--bg-light);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.event-item h4 {
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.detail-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 15px;
+}
+
+.detail-row .icon {
+    font-size: 24px;
+    min-width: 30px;
+}
+
+.detail-row p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* RSVP Section */
+.rsvp-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c4 100%);
+    border-radius: 15px;
+}
+
+.rsvp-section h3 {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.rsvp-section > p {
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+    padding: 12px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(139, 69, 19, 0.2);
+}
+
+.submit-btn {
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.gallery-section h3 {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Closing */
+.closing {
+    text-align: center;
+    margin: 50px 0;
+    padding: 30px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.closing p {
+    margin: 12px 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.closing-gratitude {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: 20px !important;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .couple-name {
+        font-size: 48px;
+    }
+
+    .invitation {
+        padding: 30px 20px;
+    }
+
+    .couple-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .separator {
+        margin: 20px 0;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rsvp-form {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .couple-name {
+        font-size: 36px;
+    }
+
+    .invitation-text {
+        font-size: 14px;
+    }
+
+    .open-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
