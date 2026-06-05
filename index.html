@@ -15,7 +15,7 @@
                 <p class="invitation-text">Undangan Pernikahan</p>
                 <h1 class="couple-name">Yunizaf & Selma</h1>
                 <p class="invitation-date">Sabtu, 04 Juli 2026</p>
-                <button class="open-btn" onclick="openInvitation()">Buka Undangan</button>
+                <button class="open-btn" id="openBtn" type="button">Buka Undangan</button>
             </div>
             <div class="cover-decoration">
                 <div class="flower flower-1">🌹</div>
@@ -124,16 +124,76 @@
             <p>apabila Bapak/Ibu berkenan menghadiri dan mendoakan semoga</p>
             <p>pernikahan kami diberkahi oleh Allah Subhanahu Wa Ta'ala</p>
             <p class="closing-gratitude">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
-            <p style="margin-top: 30px; font-style: italic;">Ade & Bella</p>
+            <p style="margin-top: 30px; font-style: italic;">Yunizaf & Selma</p>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <p>© 2024 Undangan Pernikahan Digital | Dibuat dengan ❤️</p>
+            <p>© 2026 Undangan Pernikahan Digital | Dibuat dengan ❤️</p>
         </div>
 
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        // Open Invitation Function
+        function openInvitation() {
+            console.log('Button clicked!');
+            const cover = document.getElementById('cover');
+            const invitation = document.getElementById('invitation');
+            
+            if (cover && invitation) {
+                cover.style.display = 'none';
+                invitation.style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                console.log('Invitation opened successfully');
+            } else {
+                console.log('Error: Elements not found');
+            }
+        }
+
+        // Direct click handler on button
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM Content Loaded');
+            
+            const openBtn = document.getElementById('openBtn');
+            if (openBtn) {
+                console.log('Button found, adding click listener');
+                openBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Button click event triggered');
+                    openInvitation();
+                });
+            } else {
+                console.log('Button not found');
+            }
+
+            // RSVP Form Submission
+            const rsvpForm = document.getElementById('rsvpForm');
+            if (rsvpForm) {
+                rsvpForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = {
+                        nama: this.elements[0].value,
+                        status: this.elements[1].value,
+                        jumlahTamu: this.elements[2].value,
+                        ucapan: this.elements[3].value
+                    };
+                    
+                    console.log('Data RSVP:', formData);
+                    alert('Terima kasih! Konfirmasi Anda telah diterima.');
+                    this.reset();
+                });
+            }
+
+            // Gallery click handler
+            document.querySelectorAll('.gallery img').forEach(img => {
+                img.addEventListener('click', function() {
+                    window.open(this.src, '_blank');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
